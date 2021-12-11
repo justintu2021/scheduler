@@ -7,8 +7,8 @@ const DayList = (props) => {
       return <DayListItem key={element.id}
         name={element.name} 
         spots={element.spots} 
-        selected={element.name === props.day}
-        setDay={props.setDay} />
+        selected={element.name === props.value}
+        setDay={props.onChange} />
   })
   return(
     <section className="Day List">
