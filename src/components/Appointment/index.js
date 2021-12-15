@@ -8,7 +8,7 @@ import Empty from './Empty';
 
 
 const Appointment = (props) => {
-  console.log('props.interview:', props.interview)
+  
   return (
     <article className="appointment">
       <Header time={props.time} /> 
