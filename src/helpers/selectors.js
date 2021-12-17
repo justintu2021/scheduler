@@ -3,7 +3,7 @@ export function getAppointmentsForDay(state, day) {
   const filterDay = state.days.filter(d => d.name === day)
   const apptsForDay = (filterDay.length) ? filterDay[0].appointments : [];
   const arrApptObjs = apptsForDay.map(id => state.appointments[id]);
-  console.log(arrApptObjs)
+  
   return arrApptObjs;
 }
 
@@ -17,4 +17,15 @@ export function getInterview(state, interview) {
   return interview;
 }
 
-  
+// returns array of interviewer objects for day (to be sent to Form component)
+export const getInterviewersForDay = (state,day) => {
+  const filteredDay = state.days.find(d => d["name"] === day);
+  if(!filteredDay) {
+    return [];
+  }
+  const interviewerArray = filteredDay['interviewers'];
+  const interviewersOnDay = interviewerArray.map(person => state.interviewers[person] )
+  return interviewersOnDay;
+ }
+
+
