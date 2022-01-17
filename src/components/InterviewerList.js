@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const InterviewerList = (props)=> {
   
-  const interviewers =interviewers.map((interviewer) => {
+  const interviewers =props.interviewers.map((interviewer) => {
     return (
       <InterviewerListItem 
         key={interviewer.id}
