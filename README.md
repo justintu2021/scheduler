@@ -12,7 +12,7 @@ Tech stack: React, Nodejs, Axios, Storybook, Cypress.
 ## Saving
 ![Screenshot of tweet compose box](https://github.com/justintu2021/scheduler/blob/master/docs/Saving%20Appointment.png)
 
-## Appoitnment created
+## Appointment created
 ![Screenshot of tweet compose box](https://github.com/justintu2021/scheduler/blob/master/docs/Appointment%20created.png)
 
 ## Deleting an appointment
