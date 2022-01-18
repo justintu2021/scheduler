@@ -24,7 +24,7 @@ const useApplicationData = () => {
         setState((prev) => ({ ...prev, days, appointments, interviewers }));
       }
     );
-  }, []);
+  }, [state]);
 
   const updateSpots = (state, appointments) => {
     const days = state.days.map((d) => {
@@ -36,7 +36,7 @@ const useApplicationData = () => {
       return d;
     })
     return days;
-  };
+  };  
 
   const bookInterview = (id, interview) => {
     //PUT request for appointment
@@ -47,10 +47,15 @@ const useApplicationData = () => {
           ...state.appointments[id],
           interview: { ...interview },
         };
+        console.log("interview", interview)
+        console.log("state.appointmens",state.appointments )
+        console.log("id",id)
+
         const appointments = {
           ...state.appointments,
           [id]: appointment,
         };
+        console.log("state.appointmens2",state.appointments )
 
         const days = updateSpots(state, appointments);
         setState((prev) => ({ ...prev, appointments, days }));

@@ -8,6 +8,8 @@ export default function Form (props) {
   const [interviewer, setInterviewer] = useState(props.interviewer || null);
   const [error, setError] = useState("");
 
+  
+
   function reset () {
     setInterviewer(null)
     setStudent("")
@@ -44,6 +46,7 @@ export default function Form (props) {
             onChange={(event) => {setStudent(event.target.value)}}
           />
         </form>
+        <section className="appointment__validation">{error}</section>
         <InterviewerList 
           value={interviewer}
           interviewers={props.interviewers}
@@ -60,3 +63,4 @@ export default function Form (props) {
     </main>
   )
 }
+

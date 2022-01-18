@@ -20,6 +20,7 @@ export function getInterview(state, interview) {
 // returns array of interviewer objects for day (to be sent to Form component)
 export const getInterviewersForDay = (state,day) => {
   const filteredDay = state.days.find(d => d["name"] === day);
+  
   if(!filteredDay) {
     return [];
   }
