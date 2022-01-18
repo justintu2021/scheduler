@@ -18,6 +18,16 @@ Tech stack: React, Nodejs, Axios, Storybook, Cypress.
 ## Deleting an appointment
 ![Screenshot of tweet compose box](https://github.com/justintu2021/scheduler/blob/master/docs/Deleting%20an%20appointment.png)
 
+## API Server
+
+Please note both the client and API server application must be run at the same time.
+
+Step 1: Fork and clone the scheduler-api server [here](https://github.com/justintu2021/scheduler-api)
+Step 2: Follow the instructions in README to install and setup the database
+Step 3: Fork and clone this repo
+Step 4 : Navigate to the root directory and install dependencies with npm install
+Step 5 : After setting up databse and run the  scheduler-api server running, following below command from the root directory of the project npm start
+
 ## Setup
 
 Install dependencies with `npm install`.
