@@ -65,8 +65,10 @@ export default function Appointment(props) {
           student={interview && interview.student}
           interviewer={interview && interview.interviewer.id}
           interviewers={interviewers && interviewers}
+          onCancel={() => {
+            transition(SHOW);
+          }}
           onSave={save}
-          onCancel={() => back()}
         />
       )}
       {mode === SAVING && <Status message="Saving" />}
@@ -87,12 +89,14 @@ export default function Appointment(props) {
         />
       )}
       {mode === ERROR_SAVE && 
-        <Error message="Could not save appoinment" onClose={() => {transition(EDIT)}} />
+        <Error message="Could not save appoinment" onClose={back} />
       }
       {mode === ERROR_DELETE && 
         <Error
           message="Could not cancel the appoinment"
-          onClose={back}
+          onClose={() => {
+            transition(SHOW);
+          }}
         />
       }
     </article>
